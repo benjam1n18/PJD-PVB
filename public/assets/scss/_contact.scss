@@ -1,0 +1,272 @@
+.contact-section {
+    position: relative;
+    z-index: 9;
+
+
+    &::before {
+        @include before;
+        background: rgba(30, 32, 35, 0.96);
+        z-index: -1;
+    }
+}
+
+.contact-wrapper {
+    padding-bottom: 200px;
+
+    .contact-text {
+        margin-top: 35px;
+        color: $white;
+    }
+
+    .contact-items {
+        @include flex;
+        gap: 20px;
+        margin-top: 50px;
+
+        @include breakpoint (max-xl){
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            line-height: 72px;
+            text-align: center;
+            background-color: $theme-color;
+            color: $white;
+            font-size: 25px;
+        }
+
+        .content {
+            h4 {
+                font-size: 18px;
+                font-weight: 700;
+                color: $white;
+                margin-bottom: 3px;
+            }
+
+            p {
+                color: $white;
+
+                a {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .contact-form-items {
+        background-color: $theme-color;
+        padding: 35px;
+
+        h3 {
+            color: $white;
+        }
+
+        .contact-form {
+            margin-top: 30px;
+
+            .form-clt {
+                input,textarea {
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    background-color: $white;
+                    color: $text-color;
+                    padding: 21px 20px;
+                    line-height: 1;
+                }
+
+                textarea {
+                    padding-bottom: 245px;
+                }
+            }
+        }
+    }
+
+    @include breakpoint (max-md){
+        .section-title {
+            text-align: left;
+        }
+    }
+}
+
+.contact-wrapper-3 {
+    .man-image {
+        margin-bottom: -140px;
+        text-align: center;
+        max-width: 460px;
+
+        @include breakpoint (max-xl){
+            margin-bottom: 0;
+        }
+
+        img {
+            @include imgw;
+        }
+    }
+    .contact-form-items {
+        padding: 35px;
+        background-color: $theme-color;
+
+        .section-title {
+            span {
+                color: $white;
+
+                &::before {
+                    background-color: $white;
+                }
+            }
+
+            h2 {
+                color: $white;
+            }
+        }
+    }
+    .contact-form {
+        @include breakpoint (max-md){
+            margin-top: 30px;
+        }
+        .form-clt {
+            input,textarea {
+                border: none;
+                outline: none;
+                width: 100%;
+                background-color: $white;
+                color: $text-color;
+                padding: 21px 20px;
+                line-height: 1;
+                text-transform: capitalize;
+            }
+
+            textarea {
+                padding-bottom: 145px;
+            }
+        }
+    }
+}
+
+
+.contact-wrapper-2 {
+
+    .contact-left-item {
+        .section-title {
+            @include breakpoint (max-md){
+                text-align: left;
+            }
+        }
+        .contact-item {
+            @include flex;
+            justify-content: space-between;
+
+            @include breakpoint (max-xl){
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+
+            .contect-icon-item {
+                @include flex;
+                gap: 20px;
+
+                .contact-icon {
+                    width: 60px;
+                    height: 60px;
+                    line-height: 70px;
+                    text-align: center;
+                    background-color: $theme-color;
+                    color: $white;
+                    font-size: 32px;
+                }
+
+                .contect-content {
+                    span {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: $header-color;
+                        font-family: $heading-font;
+                        display: inline-block;
+                        margin-bottom: 5px;
+                    }
+
+                    h6 {
+                        font-weight: 400;
+                        color: #555;
+
+                        a {
+                            color: #555;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+    .contact-content {
+        padding: 34px;
+        background-color: $theme-color;
+        margin-left: 50px;
+
+        @include breakpoint (max-xl){
+           margin-left: 0;
+        }
+
+        h3 {
+            margin-bottom: 30px;
+            color: $white;
+        }
+
+        .contact-form-items {
+
+            .form-clt {
+                position: relative;
+    
+                input,textarea {
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    background: $white;
+                    color: #555;
+                    border: 1px solid #D1D1D1;
+                    padding: 12px 20px;
+                    font-weight: 400;
+                    font-size: 15px;
+                    text-transform: capitalize;
+        
+                    @include breakpoint (max-md){
+                        padding: 14px 20px;
+                    }
+        
+                    @include breakpoint (max-sm){
+                        padding: 12px 18px;
+                    }
+        
+                    &::placeholder {
+                        color: #555;
+                    }
+                }
+        
+                textarea {
+                    padding-bottom: 240px;
+                    resize: none;
+                }
+            }
+        }
+    }
+}
+
+.map-items {
+    
+    .googpemap {
+
+        iframe {
+            width: 100%;
+            height: 666px;
+
+            @include breakpoint (max-sm){
+                height: 300px;
+            }
+        }
+    }
+}

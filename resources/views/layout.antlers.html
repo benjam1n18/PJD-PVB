@@ -1,15 +1,262 @@
-<!doctype html>
-<html lang="{{ site:short_locale }}">
+<!DOCTYPE html>
+<html lang="en">
+    <!--<< Header Area >>-->
     <head>
-        <meta charset="utf-8">
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{ title ?? site:name }}</title>
-        {{ vite src="resources/js/site.js|resources/css/site.css" }}
+        <meta name="author" content="modinatheme">
+        <meta name="description" content="Piet Jacobsen Design">
+        <!-- ======== Page title ============ -->
+        <title>Piet Jacobsen Design</title>
+        <!--<< Favicon >>-->
+        <link rel="shortcut icon" href="../assets/img/favicon.svg">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <!--<< Font Awesome.css >>-->
+        <link rel="stylesheet" href="../assets/css/font-awesome.css">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="../assets/css/animate.css">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="../assets/css/meanmenu.css">
+        <!--<< Odometer.css >>-->
+        <link rel="stylesheet" href="../assets/css/odometer.css">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+        <!--<< DatePicker.css >>-->
+        <link rel="stylesheet" href="../assets/css/datepickerboot.css">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="../assets/css/nice-select.css">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <!--<< Style.css >>-->
+        <link rel="stylesheet" href="../assets/css/style.css">
     </head>
-    <body class="bg-slate-100 dark:bg-gray-800 font-sans leading-normal text-slate-800 dark:text-gray-400">
-        <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
+    <body>
+
+        
+         <!-- Preloader Start -->
+         <!-- <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="P" class="letters-loading">
+                        P
+                    </span>
+                    <span data-text-preloader="I" class="letters-loading">
+                        I
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="T" class="letters-loading">
+                        T
+                    </span>
+                    <span data-text-preloader="J" class="letters-loading">
+                        J
+                    </span>
+                    <span data-text-preloader="A" class="letters-loading">
+                        A
+                    </span>
+                    <span data-text-preloader="C" class="letters-loading">
+                        C
+                    </span>
+                    <span data-text-preloader="O" class="letters-loading">
+                        O
+                    </span>
+                    <span data-text-preloader="P" class="letters-loading">
+                        P
+                    </span>
+                    <span data-text-preloader="S" class="letters-loading">
+                        S
+                    </span>
+                    <span data-text-preloader="E" class="letters-loading">
+                        E
+                    </span>
+                    <span data-text-preloader="N" class="letters-loading">
+                        N
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Back To Top start -->
+        <button id="back-top" class="back-to-top">
+            <i class="fas fa-long-arrow-up"></i>
+        </button>
+
+            {{partial:nav}}
+
+
+          
+          <div class="mx-auto px-2 lg:min-h-screen flex flex-col items-center justify-center">
             {{ template_content }}
         </div>
-    </body>
+  <!-- Footer Section Start -->
+  <footer class="footer-section">
+    <div class="frame-shape">
+       <img src="assets/img/footer/footer-shape.png" alt="img">
+    </div>
+    <div class="container">
+        <div class="footer-widget-wrapper">
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <a href="index.html" class="footer-logo">
+                            <img src="assets/img/logo/PJDlogo.png" class="w-50 h-50" alt="img">
+                            </a>
+                        </div>
+                        <div class="footer-content">
+                            <p>
+                                Our clients, our employees, and our community through our commitment to leadership, excellence in craft, and attention to detail.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-5 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <h3>Our Services</h3>
+                        </div>
+                        <ul class="list-area">
+                            <li><a href="service-details.html">Building Construction</a></li>
+                            <li><a href="service-details.html">Architecture Design</a></li>
+                            <li><a href="service-details.html">Project Management</a></li>
+                            <li><a href="service-details.html">Building Maintenance</a></li>
+                            <li><a href="service-details.html">Flooring & Roofing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 ps-lg-4 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <h3>Our Contact</h3>
+                        </div>
+                        <ul class="footer-contact">
+                            <li>
+                                3770 Hidden Meadow Drive <span>Venturia, ND 58489</span>
+                            </li>
+                            <li>
+                                <a href="tel:7045550127">(704) 555-0127</a>
+                            </li>
+                            <li>
+                                <a href="mailto:info@example.com" class="link">info@example.com</a>
+                            </li>
+                        </ul>
+                        <div class="social-list">
+                            <h4>Follow Us:</h4>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                    <div class="single-footer-widget">
+                        <div class="widget-head">
+                            <h3>Our News</h3>
+                        </div>
+                        <ul class="recent-post-area">
+                            <li class="recent-post-items">
+                                <div class="thumb">
+                                    <img src="assets/img/footer/fototer-post-1.jpg" alt="img">
+                                </div>
+                                <div class="content">
+                                    <ul class="post-date">
+                                        <li>
+                                            12 January, 2025
+                                        </li>
+                                    </ul>
+                                    <h6>
+                                        <a href="news-details.html">
+                                        Exploring Health Coaching Techniques
+                                        </a>
+                                    </h6>
+                                </div>
+                            </li>
+                            <li class="recent-post-items">
+                                <div class="thumb">
+                                    <img src="assets/img/footer/fototer-post-2.jpg" alt="img">
+                                </div>
+                                <div class="content">
+                                    <ul class="post-date">
+                                        <li>
+                                            09 May, 2025
+                                        </li>
+                                    </ul>
+                                    <h6>
+                                        <a href="news-details.html">
+                                        How Can You Growing Your Agriculture 
+                                        </a>
+                                    </h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="footer-bottom-wrapper wow fadeInUp" data-wow-delay=".3s">
+                <p class="text-center">Copyright 2025 – All Rights Reserved By PietJacobsenDesign</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-name wow img-custom-anim-bottom" data-wow-duration="1.3s" data-wow-delay="0.3s">
+       <h2>
+         Piet Jacobsen
+       </h2>
+   </div>
+</footer>
+
+<!--<< All JS Plugins >>-->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<!--<< Bootstrap Js >>-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<!--<< Nice Select Js >>-->
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<!--<< Odometer Js >>-->
+<script src="assets/js/odometer.min.js"></script>
+<!--<< Appear Js >>-->
+<script src="assets/js/jquery.appear.min.js"></script>
+<!--<< Datepicker Js >>-->
+<script src="assets/js/bootstrap-datepicker.js"></script>
+<!--<< Swiper Slider Js >>-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!--<< MeanMenu Js >>-->
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+<!--<< Magnific Popup Js >>-->
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<!--<< Wow Animation Js >>-->
+<script src="assets/js/wow.min.js"></script>
+<!--<< Main.js >>-->
+<script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,31 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: email
+            field:
+              placeholder: 'Email adres'
+              type: text
+              display: Email
+          -
+            handle: naam
+            field:
+              placeholder: Naam
+              type: text
+              display: Naam
+          -
+            handle: telefoon_nummer
+            field:
+              placeholder: 'Telefoon nummer'
+              autocomplete: cc-number
+              type: text
+              display: 'Telefoon nummer'
+          -
+            handle: bericht
+            field:
+              placeholder: 'Uw bericht'
+              type: textarea
+              display: Bericht

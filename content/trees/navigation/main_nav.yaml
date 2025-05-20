@@ -1,0 +1,17 @@
+tree:
+  -
+    id: 3b6a0c63-9bfa-4cb1-bbd0-ffc54cd9b8ff
+    title: Home
+    url: /
+  -
+    id: a1bfd358-7cf1-4664-9442-64e16830515a
+    title: Zinkwerk
+    url: zinkwerk
+  -
+    id: 147a2466-fcc1-4bf5-99c3-efdbea43b415
+    title: Houtbewerking
+    url: /houtbewerking
+  -
+    id: 8bbb7292-6d1f-406c-a6cf-7f1f889ea888
+    title: Contact
+    url: /contact

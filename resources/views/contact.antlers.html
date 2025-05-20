@@ -1,0 +1,175 @@
+
+  <!-- Breadcrumb-section Start -->
+        <section class="breadcrumb-section fix bg-cover" style="background-image: url(assets/img/breadcrumb.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="page-heading">
+                        <ul class="breadcrumb-list wow fadeInUp" data-wow-delay=".3s">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li>
+                                Contact Us
+                            </li>
+                        </ul>
+                        <h2 class="wow fadeInUp" data-wow-delay=".5s">Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section-21 section-padding fix">
+            <div class="container">
+                <div class="contact-wrapper-2">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="contact-left-item">
+                                <div class="section-title">
+                                    <span class="wow fadeInUp">Neem contact op</span>
+                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Contact with <br> Us for Your Help</h2>
+                                    <p class="mt-4 wow fadeInUp" data-wow-delay=".5s">
+                                        Our clients, our employees, and our community through our commitment to leadership, excellence in craft, and attention to detail.
+                                    </p>
+                                 </div>
+                                <div class="contact-item mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".3s">
+                                    <div class="contect-icon-item">
+                                        <div class="contact-icon">
+                                            <i class="flaticon-phone-1"></i>
+                                        </div>
+                                        <div class="contect-content">
+                                            <span>Call Us</span>
+                                            <h6>
+                                                <a href="tel:+00479394888">+00479394888</a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="contect-icon-item">
+                                        <div class="contact-icon">
+                                            <i class="flaticon-suitcase"></i>
+                                        </div>
+                                        <div class="contect-content">
+                                            <span>Our Email Us</span>
+                                            <h6>
+                                                <a href="mailto:konstruck@gmial.com">konstruck@gmial.com</a>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-item mt-5 wow fadeInUp" data-wow-delay=".5s">
+                                    <div class="contect-icon-item">
+                                        <div class="contact-icon">
+                                            <i class="flaticon-location"></i>
+                                        </div>
+                                        <div class="contect-content">
+                                            <span>Location</span>
+                                            <h6>
+                                                Graaf Floriss 22A CH NY
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="contect-icon-item">
+                                        <div class="contact-icon">
+                                            <i class="flaticon-clock"></i>
+                                        </div>
+                                        <div class="contect-content">
+                                            <span>Opening Hour</span>
+                                            <h6>
+                                                Mon - Fri: 09am - 07pm
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            {{ form:contact }}
+ 
+    // First let's check if this is after a submission, and if so, was it successful.
+    // If it was, just show the success message. After all, we don't want them submitting again once they've gotten in touch!
+    {{ if success }}
+        <div class="bg-green-300 text-white p-2">
+            {{ success }}
+        </div>
+    {{ else }}
+        // If we weren't successful, show any errors. If a fresh page load, there's no errors, so do nothing.
+        {{ if errors }}
+            <div class="bg-red-300 text-white p-2">
+                {{ errors }}
+                    {{ value }}<br>
+                {{ /errors }}
+            </div>
+        {{ /if }}
+ 
+        // Loop through and render the form inputs
+        {{ fields }}
+            <div class="p-2">
+                <label>{{ display }}</label>
+                <div class="p-1">{{ field }}</div>
+                {{ if error }}
+                    <p class="text-gray-500">{{ error }}</p>
+                {{ /if }}
+            </div>
+        {{ /fields }}
+ 
+        // Add the honeypot field
+        <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
+ 
+        // This is just a submit button.
+        <button type="submit">Submit</button>
+    {{ /if }}
+ 
+{{ /form:contact }}
+                            <div class="contact-content">
+                                <h3 class="wow fadeInUp" data-wow-delay=".3s">We’d love to hear from you</h3>
+                                <form action="contact.php" id="contact-form1" method="POST" class="contact-form-items">
+                                    <div class="row g-4">
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="form-clt">
+                                                <input type="text" name="name" id="email11" placeholder="Your email">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                                            <div class="form-clt">
+                                                <input type="text" name="name" id="name331" placeholder="Your name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                                            <div class="form-clt">
+                                                <input type="text" name="name" id="phone" placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                                            <div class="form-clt">
+                                                <input type="text" name="name" id="subject" placeholder="Your subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
+                                            <div class="form-clt">
+                                                <textarea name="message" id="message1" placeholder="Write a message..."></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                            <button type="submit" class="theme-btn bg-black">
+                                                SEND MESSAGE <i class="far fa-arrow-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map-section Start -->
+        <div class="map-section">
+            <div class="map-items">
+                <div class="googpemap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+  
