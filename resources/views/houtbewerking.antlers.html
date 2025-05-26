@@ -34,6 +34,169 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <!--<< Style.css >>-->
         <link rel="stylesheet" href="assets/css/style.css">
+        {{# before  and after slider #}}
+         <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css">
+
+         <style>
+        .beer-slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .beer-slider {
+            display: inline-block;
+            overflow: hidden;
+            position: relative
+        }
+
+        .beer-slider *,
+        .beer-slider:after,
+        .beer-slider :after,
+        .beer-slider:before,
+        .beer-slider :before {
+            box-sizing: border-box
+        }
+
+        .beer-slider img,
+        .beer-slider svg {
+            vertical-align: bottom
+        }
+
+        .beer-slider>* {
+            height: 100%
+        }
+
+        .beer-slider>img {
+            height: auto;
+            max-width: 100%
+        }
+
+        .beer-reveal {
+            left: 0;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            right: 50%;
+            top: 0;
+            transition: opacity .35s;
+            z-index: 1
+        }
+
+        .beer-reveal>:first-child {
+            height: 100%;
+            max-width: none;
+            width: 200%
+        }
+
+        .beer-reveal>img:first-child {
+            height: auto
+        }
+
+        .beer-range {
+            -moz-appearance: none;
+            -ms-touch-action: auto;
+            -webkit-appearance: slider-horizontal !important;
+            bottom: 0;
+            cursor: pointer;
+            height: 100%;
+            left: -1px;
+            margin: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            touch-action: auto;
+            width: calc(100% + 2px);
+            z-index: 2
+        }
+
+        .beer-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 300vh
+        }
+
+        .beer-range::-moz-range-thumb {
+            -webkit-appearance: none;
+            height: 300vh
+        }
+
+        .beer-range::-ms-tooltip {
+            display: none
+        }
+
+        .beer-handle {
+            background: hsla(0, 0%, 100%, .5);
+            border-radius: 50%;
+            box-shadow: 0 0 6px transparent;
+            color: #000;
+            height: 48px;
+            left: 50%;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            transition: background .3s, box-shadow .3s, opacity .5s .25s;
+            width: 48px;
+            z-index: 2
+        }
+
+        .beer-handle:after,
+        .beer-handle:before {
+            border-left: 2px solid;
+            border-top: 2px solid;
+            content: "";
+            height: 10px;
+            position: absolute;
+            top: 50%;
+            transform-origin: 0 0;
+            width: 10px
+        }
+
+        .beer-handle:before {
+            left: 10px;
+            transform: rotate(-45deg)
+        }
+
+        .beer-handle:after {
+            right: 0;
+            transform: rotate(135deg)
+        }
+
+        .beer-range:focus~.beer-handle {
+            background: hsla(0, 0%, 100%, .85);
+            box-shadow: 0 0 3px rgba(0, 0, 0, .4)
+        }
+
+        .beer-reveal[data-beer-label]:after,
+        .beer-slider[data-beer-label]:after {
+            background: hsla(0, 0%, 100%, .75);
+            border-radius: .125rem;
+            content: attr(data-beer-label);
+            line-height: 1;
+            padding: .5rem;
+            position: absolute;
+            top: 1.5rem
+        }
+
+        .beer-slider[data-beer-label]:after {
+            right: 1.5rem
+        }
+
+        .beer-reveal[data-beer-label]:after {
+            left: 1.5rem
+        }
+
+        .beer-reveal[data-beer-label=""]:after,
+        .beer-slider[data-beer-label=""]:after {
+            content: none
+        }
+
+        .beer-ready .beer-handle,
+        .beer-ready .beer-reveal {
+            opacity: 1
+        }
+    </style>
     </head>
 
  
@@ -43,58 +206,22 @@
                 <div class="hero-wrapper">
                     <div class="left-content">
                         <h1 class="wow fadeInUp" data-wow-delay=".3s">
-                        Jouw idee, <br> ons vakmanschap  <br> in hout.
+                        Houtbewerking.
                         </h1>
                     </div>
                      <div class="right-content">
-                        <p class="wow fadeInUp" data-wow-delay=".3s">
-                            At the heart of the global landscape, the industry stands as<br> multidimensional force of progress, driving economies. Lorem ipsum <br> dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <div class="hero-us-btn wow fadeInUp" data-wow-delay=".5s">
-                            <a href="/contact" class="theme-btn">Contact <i class="far fa-arrow-right"></i></a>
+                        <h4 class="wow fadeInUp text-white" data-wow-delay=".3s">
+                            Jouw idee, <br> ons vakmanschap  <br> in hout.
+                        </h4>
+                          <div class="hero-us-btn wow fadeInUp" data-wow-delay=".5s">
+                            <a href="#gallery" class="theme-btn">Foto's<i class="far fa-arrow-down"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Feature section Start -->
-        <section class="feature-section-3 fix bg-cover section-padding" style="background-image: url('assets/img/choose-us/feature-bg.jpg');">
-            <div class="container">
-                <div class="feature-wrapper-3">
-                    <div class="icon-items wow fadeInUp" data-wow-delay=".2s">
-                        <div class="icon">
-                            <i class="flaticon-medal"></i>
-                        </div>
-                        <h4>Quality Control <br> System</h4>
-                    </div>
-                    <div class="icon-items wow fadeInUp" data-wow-delay=".4s">
-                        <div class="icon">
-                            <i class="flaticon-energy"></i>
-                        </div>
-                        <h4>Building Quality <br> Industrial</h4>
-                    </div>
-                    <div class="icon-items wow fadeInUp" data-wow-delay=".6s">
-                        <div class="icon">
-                            <i class="flaticon-guarantee"></i>
-                        </div>
-                        <h4>We're Certified <br> Company</h4>
-                    </div>
-                    <div class="icon-items wow fadeInUp" data-wow-delay=".8s">
-                        <div class="icon">
-                            <i class="flaticon-worker"></i>
-                        </div>
-                        <h4>Safety & Industry <br> Compliance</h4>
-                    </div>
-                    <div class="icon-items wow fadeInUp" data-wow-delay=".9s">
-                        <div class="icon">
-                            <i class="flaticon-support"></i>
-                        </div>
-                        <h4>Offer 24/7 Quick <br> Support</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
+     
 
         <!-- About section Start -->
         <section class="about-section-3 section-padding fix">
@@ -222,8 +349,30 @@
             </div>
         </section>
 
-        <!-- gallery -->
-        <div class="container pb-5">
+<section>
+    {{# before after slider #}}
+      <div class="container">
+        <h2 class="text-center mb-4">Before / After Slider</h2>
+
+        <div class="beer-slider" id="slider" data-beer-label="Before">
+            <img src="assets/images/hout/before.png" class="img-fluid" alt="Before">
+            <div class="beer-reveal" data-beer-label="After">
+                <img src="assets/images/hout/after.png" class="img-fluid" alt="After">
+            </div>
+        </div>
+    </div>
+
+    <!-- BeerSlider JS -->
+    <script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+
+    <script>
+        new BeerSlider(document.getElementById('slider'));
+    </script>
+</section>
+
+
+        <!-- gallery --> 
+        <div class="container pb-5" id="gallery">
             <div class="section-title style-1 text-center">
                 <span class="wow fadeInUp">WHY CHOOSE US</span>
                 <h2 class="wow fadeInUp" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s;">Our Feature Projects</h2>
