@@ -28,7 +28,7 @@
                                     <span class="wow fadeInUp">Neem contact op</span>
                                     <h2 class="wow fadeInUp" data-wow-delay=".3s">Contact with <br> Us for Your Help</h2>
                                     <p class="mt-4 wow fadeInUp" data-wow-delay=".5s">
-                                        Our clients, our employees, and our community through our commitment to leadership, excellence in craft, and attention to detail.
+                                       Vertel duidelijk wat je wilt laten maken – bijvoorbeeld een meubelstuk, zinken afwerking of maatwerkproject. Geef aan welk materiaal je in gedachten hebt (zoals houtsoort of zinktype) en wat je budget is. Hoe concreter je bent, hoe beter Piet kan meedenken en een voorstel op maat kan maken. Samen zorgen we voor een resultaat dat perfect bij jouw wensen past.
                                     </p>
                                  </div>
                                 <div class="contact-item mt-4 mt-md-0 wow fadeInUp" data-wow-delay=".3s">
@@ -37,9 +37,9 @@
                                             <i class="flaticon-phone-1"></i>
                                         </div>
                                         <div class="contect-content">
-                                            <span>Call Us</span>
+                                            <span>Telefoon</span>
                                             <h6>
-                                                <a href="tel:+00479394888">+00479394888</a>
+                                                <a href="tel:+31657024910">+31 6 57024910</a>
                                             </h6>
                                         </div>
                                     </div>
@@ -48,9 +48,9 @@
                                             <i class="flaticon-suitcase"></i>
                                         </div>
                                         <div class="contect-content">
-                                            <span>Our Email Us</span>
+                                            <span>Email ons</span>
                                             <h6>
-                                                <a href="mailto:konstruck@gmial.com">konstruck@gmial.com</a>
+                                                <a href="mailto:info@pietjacobsendesign.nl">info@pietjacobsendesign.nl</a>
                                             </h6>
                                         </div>
                                     </div>
@@ -61,13 +61,13 @@
                                             <i class="flaticon-location"></i>
                                         </div>
                                         <div class="contect-content">
-                                            <span>Location</span>
+                                            <span>Locatie</span>
                                             <h6>
-                                                Graaf Floriss 22A CH NY
+                                               heerenveen en omstreken.
                                             </h6>
                                         </div>
                                     </div>
-                                    <div class="contect-icon-item">
+                                    <!-- <div class="contect-icon-item">
                                         <div class="contact-icon">
                                             <i class="flaticon-clock"></i>
                                         </div>
@@ -77,85 +77,51 @@
                                                 Mon - Fri: 09am - 07pm
                                             </h6>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6">
 
-                            {{ form:contact }}
- 
-    // First let's check if this is after a submission, and if so, was it successful.
-    // If it was, just show the success message. After all, we don't want them submitting again once they've gotten in touch!
-    {{ if success }}
-        <div class="bg-green-300 text-white p-2">
-            {{ success }}
-        </div>
-    {{ else }}
-        // If we weren't successful, show any errors. If a fresh page load, there's no errors, so do nothing.
-        {{ if errors }}
-            <div class="bg-red-300 text-white p-2">
-                {{ errors }}
-                    {{ value }}<br>
-                {{ /errors }}
-            </div>
-        {{ /if }}
- 
-        // Loop through and render the form inputs
-        {{ fields }}
-            <div class="p-2">
-                <label>{{ display }}</label>
-                <div class="p-1">{{ field }}</div>
-                {{ if error }}
-                    <p class="text-gray-500">{{ error }}</p>
-                {{ /if }}
-            </div>
-        {{ /fields }}
- 
-        // Add the honeypot field
-        <input type="text" class="hidden" name="{{ honeypot ?? 'honeypot' }}">
- 
-        // This is just a submit button.
-        <button type="submit">Submit</button>
-    {{ /if }}
- 
-{{ /form:contact }}
                             <div class="contact-content">
-                                <h3 class="wow fadeInUp" data-wow-delay=".3s">We’d love to hear from you</h3>
-                                <form action="contact.php" id="contact-form1" method="POST" class="contact-form-items">
-                                    <div class="row g-4">
-                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                                            <div class="form-clt">
-                                                <input type="text" name="name" id="email11" placeholder="Your email">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
-                                            <div class="form-clt">
-                                                <input type="text" name="name" id="name331" placeholder="Your name">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
-                                            <div class="form-clt">
-                                                <input type="text" name="name" id="phone" placeholder="Phone Number">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 wow fadeInUp" data-wow-delay=".7s">
-                                            <div class="form-clt">
-                                                <input type="text" name="name" id="subject" placeholder="Your subject">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".9s">
-                                            <div class="form-clt">
-                                                <textarea name="message" id="message1" placeholder="Write a message..."></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
-                                            <button type="submit" class="theme-btn bg-black">
-                                                SEND MESSAGE <i class="far fa-arrow-right"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <h3 class="wow fadeInUp" data-wow-delay=".3s">Neem contact op!</h3>
+                                <div class="contact-form-items">
+                
+
+                        {{ form:create in="contact" }}
+                        <div class="row g-4">
+                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="form-clt">
+                                    <input type="text" name="naam" placeholder="Naam" value="{{ old:naam }}" class="form-control">
+                                    {{ if errors:naam }}<small class="text-danger">{{ errors:naam }}</small>{{ /if }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="form-clt">
+                                    <input type="email" name="email" placeholder="Email address" value="{{ old:email }}" class="form-control">
+                                    {{ if errors:email }}<small class="text-danger">{{ errors:email }}</small>{{ /if }}
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="form-clt">
+                                    <input type="text" name="telefoon_nummer" placeholder="telefoon nummer" value="{{ old:telefoon_nummer }}" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="form-clt">
+                                    <textarea name="bericht" placeholder="Uw bericht" class="form-control" rows="5">{{ old:bericht }}</textarea>
+                                    {{ if errors:bericht }}<small class="text-danger">{{ errors:bericht }}</small>{{ /if }}
+                                </div>
+                            </div>
+                            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".5s">
+                                <button type="submit" class="theme-btn bg-header">
+                                    VERSTUUR <i class="far fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        {{ /form:create }}
+
+                    </div>
                             </div>
                         </div>
                     </div>
@@ -167,7 +133,7 @@
         <div class="map-section">
             <div class="map-items">
                 <div class="googpemap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76914.60653962559!2d5.844869563802103!3d52.95595375901563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c85eec0750e1ef%3A0x7237b589801e4b48!2sHeerenveen!5e0!3m2!1snl!2snl!4v1748254437883!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>

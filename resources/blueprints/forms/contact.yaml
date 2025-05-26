@@ -5,17 +5,17 @@ tabs:
       -
         fields:
           -
-            handle: email
-            field:
-              placeholder: 'Email adres'
-              type: text
-              display: Email
-          -
             handle: naam
             field:
               placeholder: Naam
               type: text
               display: Naam
+          -
+            handle: email
+            field:
+              placeholder: 'Email adres'
+              type: text
+              display: Email
           -
             handle: telefoon_nummer
             field:

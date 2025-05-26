@@ -11826,7 +11826,6 @@ p.sticky-label {
   color: var(--text);
   padding: 21px 20px;
   line-height: 1;
-  text-transform: capitalize;
 }
 .contact-wrapper-3 .contact-form .form-clt textarea {
   padding-bottom: 145px;
@@ -11904,7 +11903,6 @@ p.sticky-label {
   padding: 12px 20px;
   font-weight: 400;
   font-size: 15px;
-  text-transform: capitalize;
 }
 @media (max-width: 767px) {
   .contact-wrapper-2 .contact-content .contact-form-items .form-clt input, .contact-wrapper-2 .contact-content .contact-form-items .form-clt textarea {
