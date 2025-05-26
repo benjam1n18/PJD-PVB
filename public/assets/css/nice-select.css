@@ -85,7 +85,7 @@
       line-height: 34px;
       min-height: 34px; }
   .nice-select .list {
-    background-color: #150145;
+    background-color: white;
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 4px;
@@ -121,13 +121,13 @@
     outline: none;
     z-index: 9999999;
     padding: 0px 10px;
-    border: 1px solid #121254;
+    border: 1px solid #3f3877;
     text-align: left;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
    }
     .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
-      background-color: #101046; }
+      background-color: white; }
     .nice-select .option.selected {
       font-weight: bold; }
     .nice-select .option.disabled {
